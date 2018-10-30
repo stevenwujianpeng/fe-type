@@ -15,9 +15,9 @@
     "url": "git+https://github.com/stevenwujianpeng/fe-type.git"
   },
   "keywords": [
-    "className",
-    "React",
-    "class"
+    "typeof",
+    "javascript",
+    "type"
   ],
   "files": [
     "dist"
