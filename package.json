@@ -1,0 +1,58 @@
+{
+  "name": "fe-type",
+  "version": "1.0.0",
+  "description": "准确给出变量的类型，修复typeof的问题，目前不支持ES6中的Set,Map等数据类型。",
+  "main": "dist/index.js",
+  "module": "dist/index.esm.js",
+  "scripts": {
+    "test": "jest",
+    "test:report": "jest --coverage",
+    "lint": "./node_modules/.bin/eslint src",
+    "build": "npm run test && rollup -c"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/stevenwujianpeng/fe-type.git"
+  },
+  "keywords": [
+    "className",
+    "React",
+    "class"
+  ],
+  "files": [
+    "dist"
+  ],
+  "author": "",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/stevenwujianpeng/fe-type/issues"
+  },
+  "homepage": "https://github.com/stevenwujianpeng/fe-type/blob/master/README.md",
+  "dependencies": {},
+  "devDependencies": {
+    "babel-core": "^6.26.3",
+    "babel-eslint": "^10.0.1",
+    "babel-jest": "^23.6.0",
+    "babel-plugin-external-helpers": "^6.22.0",
+    "babel-preset-es2015": "^6.24.1",
+    "babelrc-rollup": "^3.0.0",
+    "eslint": "^5.8.0",
+    "jest": "^23.6.0",
+    "regenerator-runtime": "^0.12.1",
+    "rollup": "^0.43.0",
+    "rollup-plugin-babel": "^2.7.1",
+    "rollup-plugin-istanbul": "^1.1.0",
+    "rollup-plugin-node-resolve": "^3.4.0",
+    "rollup-watch": "^4.0.0",
+    "babel-register": "^6.18.0",
+    "istanbul": "^0.4.5",
+    "mocha": "^3.2.0"
+  },
+  "jest": {
+    "transform": {
+      "^.+\\.jsx?$": "babel-jest"
+    },
+    "verbose": true,
+    "silent": true
+  }
+}
