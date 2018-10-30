@@ -21,28 +21,27 @@
 
 # Install
 npm: 
-> npm install fe-classnames --save
+> npm i fe-type
 
 yarn:
-> yarn add fe-classnames
+> yarn add fe-type
 
 # Usage
 
 ```javascript
-import classNames from 'fe-classnames';
+import type from 'fe-type';
 
-class ComponentA extends React.Component {
-    
-    render () {
-        const cls = classNames('btn', {
-            'online': true,
-            'offLine': false,
-        }, ['btn-active'])
+type(true) === 'boolean';
+type(undefined) === 'undefined';
+type(null) === 'null';
+type({name: 'test'}) === 'Object';
+type([1,2,3]) === 'Array';
+type(new Date()) === 'Date';
 
-        <div className={cls}>例子</div>
-        // Output: <div className="btn online btn-active">例子</div>
-    }
-}
+// 自定义
+function ClassA () {}
+
+type(new ClassA()) === 'ClassA'
 ```
 
 # Test Coverage
