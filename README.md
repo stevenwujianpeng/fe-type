@@ -32,17 +32,17 @@ yarn:
 ```javascript
 const feType = require('fe-type');
 
-feType(true) === 'boolean';
-feType(undefined) === 'undefined';
-feType(null) === 'null';
-feType({name: 'test'}) === 'Object';
-feType([1,2,3]) === 'Array';
-feType(new Date()) === 'Date';
+feType(true) // 'boolean';
+feType(undefined) // 'undefined';
+feType(null) // 'null';
+feType({name: 'test'}) // 'Object';
+feType([1,2,3]) // 'Array';
+feType(new Date()) // 'Date';
 
 // 自定义
 function ClassA () {}
 
-feType(new ClassA()) === 'ClassA'
+feType(new ClassA()) // 'ClassA'
 ```
 
 # Test Coverage
