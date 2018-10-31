@@ -12,6 +12,7 @@
 </html>
 
 准确给出变量的类型，修复typeof的问题，目前不支持ES6中的Set,Map等数据类型。
+> 源码是ES5语法写的commonjs模块规范
 
 
 # Feature
@@ -29,19 +30,19 @@ yarn:
 # Usage
 
 ```javascript
-import type from 'fe-type';
+const feType from 'fe-type';
 
-type(true) === 'boolean';
-type(undefined) === 'undefined';
-type(null) === 'null';
-type({name: 'test'}) === 'Object';
-type([1,2,3]) === 'Array';
-type(new Date()) === 'Date';
+feType(true) === 'boolean';
+feType(undefined) === 'undefined';
+feType(null) === 'null';
+feType({name: 'test'}) === 'Object';
+feType([1,2,3]) === 'Array';
+feType(new Date()) === 'Date';
 
 // 自定义
 function ClassA () {}
 
-type(new ClassA()) === 'ClassA'
+feType(new ClassA()) === 'ClassA'
 ```
 
 # Test Coverage
