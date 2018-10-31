@@ -30,7 +30,7 @@ yarn:
 # Usage
 
 ```javascript
-const feType from 'fe-type';
+const feType = require('fe-type');
 
 feType(true) === 'boolean';
 feType(undefined) === 'undefined';
