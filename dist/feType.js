@@ -1,3 +1,5 @@
+'use strict';
+
 function feType(input) {
   if (typeof input !== 'object') {
     return typeof input;

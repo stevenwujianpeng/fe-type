@@ -1,44 +1,39 @@
-import type from '../src/index';
+var type = require('../src/index');
+var assert = require('assert');
 
-describe('type', () => {
-  test('undefined', () => {
-    expect(type(undefined)).toBe('undefined');
+describe('feType', function () {
+  it('undefined', function () {
+    assert.equal(type(undefined),'undefined');
   });
-  test('null', () => {
-    expect(type(null)).toBe('null');
+  it('null', function () {
+    assert.equal(type(null),'null');
   });
-  test('number', () => {
-    expect(type(10)).toBe('number');
+  it('number', function () {
+    assert.equal(type(10),'number');
   });
-
-  test('boolean', () => {
-    expect(type(true)).toBe('boolean');
-    expect(type(false)).toBe('boolean');
+  it('boolean', function () {
+    assert.equal(type(true),'boolean');
+    assert.equal(type(false),'boolean');
   });
-
-  test('string', () => {
-    expect(type('test')).toBe('string');
+  it('string', function () {
+    assert.equal(type('test'),'string');
   });
-
-  test('Array', () => {
-    expect(type([1, 2])).toBe('Array');
+  it('Array', function () {
+    assert.equal(type([1, 2]),'Array');
   });
 
-  test('Object', () => {
-    expect(type({name: 'Object'})).toBe('Object');
+  it('Object', function () {
+    assert.equal(type({name: 'Object'}),'Object');
   });
-
-  test('Date', () => {
-    expect(type(new Date())).toBe('Date');
+  it('Date', function () {
+    assert.equal(type(new Date()),'Date');
   });
-
-  test('RegExp', () => {
-    expect(type(new RegExp())).toBe('RegExp');
+  it('RegExp', function () {
+    assert.equal(type(new RegExp()),'RegExp');
   });
-
-  test('自定义的构造函数', () => {
+  it('自定义的构造函数', function () {
     function CustomType() {
-    };
-    expect(type(new CustomType())).toBe('CustomType');
+  };
+    assert.equal(type(new CustomType()),'CustomType');
   });
-});
+})

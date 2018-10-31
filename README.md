@@ -47,27 +47,28 @@ type(new ClassA()) === 'ClassA'
 # Test Coverage
 
 ```
-  PASS  test/index.test.js
-   type
-     ✓ undefined (4ms)
-     ✓ null (1ms)
-     ✓ number
-     ✓ boolean (1ms)
-     ✓ string
-     ✓ Array
-     ✓ Object
-     ✓ Date (1ms)
-     ✓ RegExp
-     ✓ 自定义的构造函数
- 
- ----------|----------|----------|----------|----------|-------------------|
- File      |  % Stmts | % Branch |  % Funcs |  % Lines | Uncovered Line #s |
- ----------|----------|----------|----------|----------|-------------------|
- All files |      100 |      100 |      100 |      100 |                   |
-  index.js |      100 |      100 |      100 |      100 |                   |
- ----------|----------|----------|----------|----------|-------------------|
- Test Suites: 1 passed, 1 total
- Tests:       10 passed, 10 total
+  feType
+    ✓ undefined
+    ✓ null
+    ✓ number
+    ✓ boolean
+    ✓ string
+    ✓ Array
+    ✓ Object
+    ✓ Date
+    ✓ RegExp
+    ✓ 自定义的构造函数
+
+
+  10 passing (12ms)
+
+----------|----------|----------|----------|----------|-------------------|
+File      |  % Stmts | % Branch |  % Funcs |  % Lines | Uncovered Line #s |
+----------|----------|----------|----------|----------|-------------------|
+All files |      100 |      100 |      100 |      100 |                   |
+ index.js |      100 |      100 |      100 |      100 |                   |
+----------|----------|----------|----------|----------|-------------------|
+
 
 ```
 
