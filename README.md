@@ -12,7 +12,7 @@
 </html>
 
 准确给出变量的类型，修复typeof的问题，目前不支持ES6中的Set,Map等数据类型。
-> ES5 commonjs规范 支持webpack
+> NOTE: 只支持 ES6 模块规范
 
 
 # Feature
@@ -31,7 +31,7 @@ yarn:
 # Usage
 
 ```javascript
-const feType = require('fe-type');
+import feType from 'fe-type';
 
 feType(true) // 'boolean';
 feType(undefined) // 'undefined';
