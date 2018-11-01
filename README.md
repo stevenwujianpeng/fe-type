@@ -19,6 +19,7 @@
 - 基本类型 null undefined number string 
 - 引用类型 Object Array Date RegExp 
 - 自定义的构造函数
+- No dependencies
 
 # Install
 npm: 

@@ -1,6 +1,8 @@
 const presets = [
   [
-    "@babel/env"
+    "@babel/env", {
+      "modules": false
+    }
   ],
 ];
 
