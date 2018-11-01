@@ -1,39 +1,42 @@
-var type = require('../src/index');
+require('@babel/polyfill');
+
+import feType from '../src/index';
+
 var assert = require('assert');
 
-describe('feType', function () {
+describe('fefeType', function () {
   it('undefined', function () {
-    assert.equal(type(undefined),'undefined');
+    assert.equal(feType(undefined),'undefined');
   });
   it('null', function () {
-    assert.equal(type(null),'null');
+    assert.equal(feType(null),'null');
   });
   it('number', function () {
-    assert.equal(type(10),'number');
+    assert.equal(feType(10),'number');
   });
   it('boolean', function () {
-    assert.equal(type(true),'boolean');
-    assert.equal(type(false),'boolean');
+    assert.equal(feType(true),'boolean');
+    assert.equal(feType(false),'boolean');
   });
   it('string', function () {
-    assert.equal(type('test'),'string');
+    assert.equal(feType('test'),'string');
   });
   it('Array', function () {
-    assert.equal(type([1, 2]),'Array');
+    assert.equal(feType([1, 2]),'Array');
   });
 
   it('Object', function () {
-    assert.equal(type({name: 'Object'}),'Object');
+    assert.equal(feType({name: 'Object'}),'Object');
   });
   it('Date', function () {
-    assert.equal(type(new Date()),'Date');
+    assert.equal(feType(new Date()),'Date');
   });
   it('RegExp', function () {
-    assert.equal(type(new RegExp()),'RegExp');
+    assert.equal(feType(new RegExp()),'RegExp');
   });
   it('自定义的构造函数', function () {
-    function CustomType() {
+    function CustomfeType() {
   };
-    assert.equal(type(new CustomType()),'CustomType');
+    assert.equal(feType(new CustomfeType()),'CustomfeType');
   });
 })

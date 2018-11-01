@@ -3,7 +3,8 @@ module.exports = {
     "browser": true, // 浏览器中的环境
     "commonjs": true,  // commonjs 比如：module exports
     "node": true, // node运行环境
-    "es6": true // 识别ES6中的 Set Promise 等新特性和语法
+    "es6": true, // 识别ES6中的 Set Promise 等新特性和语法
+    "mocha": true,
   },
   "extends": "eslint:recommended", // 继承eslint标准库的集合
   "parserOptions": {
