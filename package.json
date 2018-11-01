@@ -4,10 +4,10 @@
   "description": "准确给出变量的类型，修复typeof的问题，目前不支持ES6中的Set,Map等数据类型。",
   "main": "dist/feType.es.js",
   "scripts": {
-    "test": "mocha --compilers js:@babel/register",
+    "test": "cross-env NODE_ENV=test mocha --compilers js:@babel/register",
     "lint": "eslint src/*.js",
     "test:report": "nyc --reporter=text mocha --compilers js:@babel/register",
-    "build": "rollup -c"
+    "build": "cross-env NODE_ENV=production rollup -c"
   },
   "repository": {
     "type": "git",
@@ -28,14 +28,17 @@
   },
   "homepage": "https://github.com/stevenwujianpeng/fe-type/blob/master/README.md",
   "dependencies": {
-    "@babel/polyfill": "^7.0.0"
+    "@babel/polyfill": "^7.0.0",
+    "@babel/runtime": "^7.1.2"
   },
   "devDependencies": {
     "@babel/cli": "^7.1.2",
     "@babel/core": "^7.1.2",
+    "@babel/plugin-transform-runtime": "^7.1.0",
     "@babel/preset-env": "^7.1.0",
     "@babel/register": "^7.0.0",
     "assert": "^1.4.1",
+    "cross-env": "^5.2.0",
     "eslint": "^5.8.0",
     "mocha": "^5.2.0",
     "nyc": "^13.1.0",
