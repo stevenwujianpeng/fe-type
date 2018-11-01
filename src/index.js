@@ -1,13 +1,13 @@
-function feType(input) {
+const feType = (input) => {
   if (typeof input !== 'object') {
     return typeof input;
   }
 
   if (input === null) {
     return 'null';
-  } else {
-    return input.constructor.name;
   }
+
+  return input.constructor.name;
 }
 
-module.exports = feType;
+export default feType;

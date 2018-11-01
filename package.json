@@ -5,6 +5,7 @@
   "main": "dist/feType.js",
   "scripts": {
     "test": "mocha",
+    "lint": "eslint src/*.js",
     "test:report": "nyc --reporter=text mocha",
     "build": "mocha && rollup -c"
   },
@@ -28,10 +29,6 @@
   "homepage": "https://github.com/stevenwujianpeng/fe-type/blob/master/README.md",
   "dependencies": {},
   "devDependencies": {
-    "jest": "^23.6.0",
-    "mocha": "^5.2.0",
-    "rollup": "^0.66.0",
-    "rollup-plugin-commonjs": "^9.1.0",
-    "rollup-plugin-node-resolve": "^3.0.0"
+    "eslint": "^5.8.0"
   }
 }
