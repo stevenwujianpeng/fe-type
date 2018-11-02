@@ -12,8 +12,6 @@
 </html>
 
 准确给出变量的类型，修复typeof的问题，目前不支持ES6中的Set,Map等数据类型。
-> NOTE: 只支持 ES6 模块规范
-
 
 # Feature
 - 基本类型 null undefined number string 
