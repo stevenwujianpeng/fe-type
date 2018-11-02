@@ -1,12 +1,12 @@
 // const presets = ["@babel/preset-env"];
-module.exports = function (api) {
+module.exports = function (api) { // eslint-disable-line
   const env = api.env();
   const presets = [["@babel/preset-env"]];
   const plugins = [];
 
   if (env === 'production') {
     presets[0].push({
-      "targets": "> 0.25%, not dead",
+      // "targets": "last 2 versions, > 1%, ie >= 9, Android >= 4.4, iOS >= 8",
       "modules": false
     });
     plugins.push([
