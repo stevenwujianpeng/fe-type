@@ -9,6 +9,15 @@ module.exports = function (api) {
       "targets": "> 0.25%, not dead",
       "modules": false
     });
+    plugins.push([
+      "@babel/plugin-transform-runtime",
+      {
+        "corejs": 2,
+        "helpers": true,
+        "regenerator": true,
+        "useESModules": false
+      }
+    ]);
   }
 
   return {
