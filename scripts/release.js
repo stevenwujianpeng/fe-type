@@ -20,7 +20,7 @@ inquirer
       shell.echo('Error: 请先提交之前所有的修改!');
       shell.exit(1);
     } else {
-      shell.exec('git push --tags');
+      shell.exec('git push origin master');
       shell.exec('npm publish --access=public');
     }
   });
