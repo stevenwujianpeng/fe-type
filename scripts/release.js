@@ -18,15 +18,12 @@ inquirer
 
     try {
       var code = shell.exec(versionShell);
-      console.log(code);
+
+      if (code === 0) {
+        shell.exec('git push --tags');
+        shell.exec('npm publish --access=public');
+      }
     } catch (error) {
       console.log('Error: 请先提交之前所有的修改!');
     }
-    // if ( !== 0) {
-    //   shell.echo('Error: 请先提交之前所有的修改!');
-    //   shell.exit(1);
-    // } else {
-    //   shell.exec('git push origin master');
-    //   shell.exec('npm publish --access=public');
-    // }
   });
