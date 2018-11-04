@@ -16,11 +16,17 @@ inquirer
     const version = answers.version.split(' ')[0];
     const versionShell = 'npm version' + ' ' + version;
 
-    if (shell.exec(versionShell) !== 0) {
-      shell.echo('Error: 请先提交之前所有的修改!');
-      shell.exit(1);
-    } else {
-      shell.exec('git push origin master');
-      shell.exec('npm publish --access=public');
+    try {
+      var code = shell.exec(versionShell);
+      console.log(code);
+    } catch (error) {
+      console.log('Error: 请先提交之前所有的修改!');
     }
+    // if ( !== 0) {
+    //   shell.echo('Error: 请先提交之前所有的修改!');
+    //   shell.exit(1);
+    // } else {
+    //   shell.exec('git push origin master');
+    //   shell.exec('npm publish --access=public');
+    // }
   });
