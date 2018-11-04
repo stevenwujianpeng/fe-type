@@ -13,10 +13,13 @@ var questions = [{
 inquirer
   .prompt(questions)
   .then(answers => {
-    // Use user feedback for... whatever!!
     const version = answers.version.split(' ')[0];
     const versionShell = 'npm version' + ' ' + version;
 
-    shell.exec(versionShell);
-    shell.exec('git add .');
+    if (shell.exec(versionShell) !== 0) {
+      shell.echo('Error: 请先提交之前所有的修改!');
+      shell.exit(1);
+    }
+
+    shell.exec('git push --tags');
   });
