@@ -22,4 +22,5 @@ inquirer
     }
 
     shell.exec('git push --tags');
+    shell.exec('npm publish --access=public');
   });
