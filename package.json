@@ -11,7 +11,8 @@
     "test:report": "nyc --reporter=text mocha --compilers js:@babel/register",
     "precommit": "lint-staged",
     "build": "npm run clean && npm run test && cross-env NODE_ENV=production rollup -c",
-    "release": "npm test && git commit -am $npm_package_version && git tag $npm_package_version && git push && git push --tags",
+    "release:patch": "npm run test && npm version patch && git push --tags",
+    "publish": "npm publish --access=public",
     "babel": "cross-env NODE_ENV=production babel src --out-dir lib"
   },
   "lint-staged": {
