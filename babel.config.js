@@ -9,15 +9,7 @@ module.exports = function (api) { // eslint-disable-line
       "targets": "last 2 version",
       "modules": false
     });
-    plugins.push([
-      "@babel/plugin-transform-runtime",
-      {
-        "corejs": false,
-        "helpers": true,
-        "regenerator": true,
-        "useESModules": false
-      }
-    ]);
+    plugins.push(["@babel/plugin-transform-runtime"]);
   }
 
   return {
