@@ -12,6 +12,8 @@
     "precommit": "lint-staged",
     "build": "npm run clean && npm run test && cross-env NODE_ENV=production rollup -c",
     "release:patch": "npm run test && npm version patch && git push --tags",
+    "release:minor": "npm run test && npm version minor && git push --tags",
+    "release:major": "npm run test && npm version major && git push --tags",
     "publish": "npm publish --access=public",
     "babel": "cross-env NODE_ENV=production babel src --out-dir lib"
   },

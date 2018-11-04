@@ -17,13 +17,10 @@ inquirer
     const versionShell = 'npm version' + ' ' + version;
 
     try {
-      var code = shell.exec(versionShell);
-
-      if (code === 0) {
-        shell.exec('git push --tags');
-        shell.exec('npm publish --access=public');
-      }
+      shell.exec(versionShell);
+      shell.exec('git push --tags');
+      shell.exec('npm publish --access=public');
     } catch (error) {
-      console.log('Error: 请先提交之前所有的修改!');
+      console.error(error.message + '\n' + 'Error: 请先提交之前所有的修改!'); // eslint-disable-line
     }
   });
