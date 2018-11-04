@@ -19,8 +19,8 @@ inquirer
     if (shell.exec(versionShell) !== 0) {
       shell.echo('Error: 请先提交之前所有的修改!');
       shell.exit(1);
+    } else {
+      shell.exec('git push --tags');
+      shell.exec('npm publish --access=public');
     }
-
-    shell.exec('git push --tags');
-    shell.exec('npm publish --access=public');
   });
