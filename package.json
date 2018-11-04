@@ -1,6 +1,6 @@
 {
   "name": "fe-type",
-  "version": "1.4.3",
+  "version": "1.4.4",
   "description": "准确给出变量的类型，修复typeof的问题，目前不支持ES6中的Set,Map等数据类型。",
   "main": "dist/feType.cjs.js",
   "module": "dist/feType.es.js",
